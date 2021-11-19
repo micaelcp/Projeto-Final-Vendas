@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPrincipal.master.cs" Inherits="PrjVendas.MasterPrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   <%-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">--%>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link href="Content/bootadmin.min.css" rel="stylesheet" />
+    <link href="Content/sidebars.css" rel="stylesheet" />
+    <style>
+        /*.efeito_Panel_2 {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+        /* box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 2px 2px rgba(0,0,0,0.23);*/
+        /*margin-right: 2px;
+            margin-bottom: 2px;
+            font-weight: bold;
+        }*/
+
+        .efeito_Panel_2 {
+            /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+            box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 2px 2px rgba(0,0,0,0.23);
+            margin-right: 2px;
+            margin-bottom: 2px;
+            font-weight:bold;
+        }
+
+        .fa {
+            margin: 5px;
+        }
+
+        .ItemMenu {
+            color: black !important;
+            font-family: 'Roboto' !important;
+            font-size: 14px !important;
+            font-weight: 600;
+        }
+
+        .sidebarCust ul li a {
+            /*color: rgba(7, 7, 7, 0.75);*/
+            color: #03001c
+        }
+
+        .sidebarCust ul ul a {
+            background: white;
+        }
+
+        .sidebarCust ul li a:hover, .sidebar-light ul .active a {
+            /*      color: rgb(74, 13, 218);
+             background: rgba(4, 236, 55, 0.05);*/
+            color: white;
+            background:#17a2b8;
+        }
+
+        .sidebarCust [aria-expanded="true"] {
+            background: white;
+        }
+    </style>
+</head>
+<body class ="bg-light">
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" EnablePartialRendering="true">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+
+            </Scripts>
+        </asp:ScriptManager>
+        <nav class="navbar navbar-expand navbar-dark bg-info">
+            <a class="sidebar-toggle mr-3 "><i class="fa fa-bars"></i></a>
+            <a class="navbar-brand">UniVendas</a>
+        </nav>
+        <div class ="d-flex">
+            
+            <div class ="sidebar sidebarCust bg-white efeito_Panel_2 ">
+                <ul class="ItemMenu list-unstyled">
+                   <li>
+
+                        <a href="#sm_expand_1" data-toggle="collapse">
+                            <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>Cadastro
+                        </a>
+                        <ul id="sm_expand_1" class="list-unstyled collapse">
+                            <li><a href="CVendedor.aspx">Vendedor</a></li>
+                            <li><a href="CCliente.aspx">Cliente</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Ajuda</a></li>
+                        </ul>
+
+                    </li>
+                     <li>
+                        <a href="#sm_expand_2" data-toggle="collapse">
+                            <i class="fa fa-address-card fa-fw"></i>Movimentação
+                        </a>
+                        <ul id="sm_expand_2" class="list-unstyled collapse">
+                            <li><a href="CVendas.aspx">Vendas</a></li>
+                            <li><a href="CProduto.aspx">Produtos</a></li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+        <div class="content p-4">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </div>
+
+   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <%--<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>--%>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    </form>
+</body>
+</html>
