@@ -7,7 +7,7 @@ namespace PrjVendas.BLL
 {
     public class Funcoes
     {
-        private static string _connString = "Initial Catalog=bdVendas;Data Source=DITEC112826\\SQLEXPRESS;user id=usuarioVendas;password=senha;";
+        private static string _connString = "Initial Catalog=bdVendas;Data Source=DRACARYOS;user id=usuarioTeste;password=senha;";
 
         public static string connString
         {

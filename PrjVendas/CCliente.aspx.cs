@@ -77,7 +77,7 @@ namespace PrjVendas
         void Formatar_Grid()
         {
             grwCliente.UseAccessibleHeader = true;
-            grwCliente.HeaderRow.TableSection = TableRowSection.TableHeader;
+            //grwCliente.HeaderRow.TableSection = TableRowSection.TableHeader;
             AplicarDataTableGridView();
 
         }
